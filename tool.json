@@ -1,0 +1,206 @@
+{
+  "tool": {
+    "id": "nrs-2002",
+    "title": "NRS-2002",
+    "short": "Triagem de risco nutricional no paciente internado",
+    "desc": "Calcule o NRS-2002 (Nutritional Risk Screening), a triagem de risco nutricional recomendada pela ESPEN para adultos internados, com a conduta indicada.",
+    "lead": "Identifica adultos hospitalizados em risco nutricional que se beneficiam de terapia nutricional, combinando estado nutricional, gravidade da doença e idade.",
+    "spec": [
+      "nutrologia",
+      "clinica-medica",
+      "medicina-intensiva",
+      "cirurgia-geral",
+      "geriatria"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "estado",
+        "Prejuízo do estado nutricional",
+        "sel",
+        {
+          "opts": {
+            "0": "Ausente: estado nutricional normal",
+            "1": "Leve: perda de peso &gt; 5% em 3 meses ou ingestão de 50 a 75% da necessidade na última semana",
+            "2": "Moderado: perda &gt; 5% em 2 meses, ou IMC 18,5 a 20,5 com estado geral comprometido, ou ingestão de 25 a 60%",
+            "3": "Grave: perda &gt; 5% em 1 mês (&gt; 15% em 3 meses), ou IMC &lt; 18,5 com estado geral comprometido, ou ingestão de 0 a 25%"
+          }
+        }
+      ],
+      [
+        "gravidade",
+        "Gravidade da doença (aumento das necessidades)",
+        "sel",
+        {
+          "opts": {
+            "0": "Ausente: necessidades nutricionais normais",
+            "1": "Leve: fratura de quadril, doença crônica com complicação aguda (cirrose, DPOC, hemodiálise, diabetes, câncer)",
+            "2": "Moderada: cirurgia abdominal de grande porte, AVC, pneumonia grave, neoplasia hematológica",
+            "3": "Grave: traumatismo craniano, transplante de medula óssea, UTI com APACHE II &gt; 10"
+          }
+        }
+      ],
+      [
+        "idade",
+        "Idade ≥ 70 anos",
+        "chk",
+        {
+          "pts": 1
+        }
+      ]
+    ],
+    "score": {
+      "label": "NRS-2002",
+      "unit": "",
+      "bands": [
+        [
+          0,
+          "low",
+          "Sem risco nutricional no momento",
+          "Repetir a triagem semanalmente; se houver cirurgia de grande porte programada, considerar plano nutricional preventivo."
+        ],
+        [
+          3,
+          "high",
+          "Paciente em risco nutricional",
+          "Iniciar plano de terapia nutricional."
+        ]
+      ]
+    },
+    "formula": "<p>Escore = prejuízo do estado nutricional (0 a 3) + gravidade da doença (0 a 3) + 1 ponto se idade ≥ 70 anos. Total de 0 a 7.</p><p>Escore ≥ 3: risco nutricional.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Conduta"
+      ],
+      [
+        "0 a 2",
+        "Retriar semanalmente"
+      ],
+      [
+        "≥ 3",
+        "Risco nutricional: iniciar plano de terapia nutricional"
+      ]
+    ],
+    "table_note": "Pela ESPEN, a triagem começa com 4 perguntas iniciais (IMC &lt; 20,5; perda de peso em 3 meses; redução da ingestão na última semana; doença grave). Se todas forem \"não\", retriar semanalmente.",
+    "tips": [
+      "Aplique nas primeiras 24 a 48 horas da internação; não se aplica a crianças.",
+      "Na UTI, o paciente com APACHE II &gt; 10 já soma 3 pontos pela gravidade: praticamente todo doente crítico é \"em risco\" pelo NRS-2002.",
+      "Triagem positiva pede avaliação nutricional completa (por exemplo, pelos critérios GLIM para diagnóstico de desnutrição), não diagnóstico de desnutrição por si só.",
+      "Para a gravidade, compare o paciente com os exemplos da escala: eles servem de âncora para doenças não listadas."
+    ],
+    "sources": [
+      [
+        "Kondrup J et al. Nutritional risk screening (NRS 2002): a new method based on an analysis of controlled clinical trials. Clin Nutr, 2003.",
+        "https://doi.org/10.1016/S0261-5614(02)00214-5"
+      ],
+      [
+        "Kondrup J et al. ESPEN guidelines for nutrition screening 2002. Clin Nutr, 2003.",
+        "https://doi.org/10.1016/S0261-5614(03)00098-0"
+      ]
+    ],
+    "cases": [
+      [
+        "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        {
+          "estado": "1",
+          "gravidade": "1"
+        },
+        {
+          "score": 2,
+          "level": "low"
+        }
+      ],
+      [
+        "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        {
+          "estado": "1",
+          "gravidade": "1",
+          "idade": true
+        },
+        {
+          "score": 3,
+          "level": "high"
+        }
+      ],
+      [
+        "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        {
+          "estado": "2",
+          "gravidade": "2",
+          "idade": true
+        },
+        {
+          "score": 5,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "clinica",
+    "kind": "Escore",
+    "config": {
+      "unit": "",
+      "label": "NRS-2002",
+      "fields": [
+        [
+          "estado",
+          "sel",
+          0
+        ],
+        [
+          "gravidade",
+          "sel",
+          0
+        ],
+        [
+          "idade",
+          "chk",
+          1
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Sem risco nutricional no momento",
+          "Repetir a triagem semanalmente; se houver cirurgia de grande porte programada, considerar plano nutricional preventivo."
+        ],
+        [
+          3,
+          "high",
+          "Paciente em risco nutricional",
+          "Iniciar plano de terapia nutricional."
+        ]
+      ]
+    },
+    "areaId": "clinica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/clinica.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/clinica.php",
+    "sha256": "9dc60f9c51e1db27ff495c69b24d4422a87e42b8c9bc63551aac6a9bc704b2e0",
+    "bytes": 101245
+  },
+  "clinicalValidation": "not-performed"
+}

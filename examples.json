@@ -1,0 +1,54 @@
+[
+  {
+    "label": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+    "input": {
+      "estado": "1",
+      "gravidade": "1"
+    },
+    "expected": {
+      "score": 2,
+      "level": "low"
+    },
+    "originalInput": {
+      "estado": "1",
+      "gravidade": "1"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+    "input": {
+      "estado": "1",
+      "gravidade": "1",
+      "idade": true
+    },
+    "expected": {
+      "score": 3,
+      "level": "high"
+    },
+    "originalInput": {
+      "estado": "1",
+      "gravidade": "1",
+      "idade": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+    "input": {
+      "estado": "2",
+      "gravidade": "2",
+      "idade": true
+    },
+    "expected": {
+      "score": 5,
+      "level": "high"
+    },
+    "originalInput": {
+      "estado": "2",
+      "gravidade": "2",
+      "idade": true
+    },
+    "expandedZeroOptions": []
+  }
+]
