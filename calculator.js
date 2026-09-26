@@ -1,11 +1,11 @@
-/* tool-nrs-2002 · Elucenia · https://github.com/Elucenia/tool-nrs-2002
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-nrs-2002 · ELUCENIA · https://github.com/Elucenia/tool-nrs-2002
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"nrs-2002","title":"NRS-2002","fields":[["estado","Prejuízo do estado nutricional","sel",{"opts":{"0":"Ausente: estado nutricional normal","1":"Leve: perda de peso &gt; 5% em 3 meses ou ingestão de 50 a 75% da necessidade na última semana","2":"Moderado: perda &gt; 5% em 2 meses, ou IMC 18,5 a 20,5 com estado geral comprometido, ou ingestão de 25 a 60%","3":"Grave: perda &gt; 5% em 1 mês (&gt; 15% em 3 meses), ou IMC &lt; 18,5 com estado geral comprometido, ou ingestão de 0 a 25%"}}],["gravidade","Gravidade da doença (aumento das necessidades)","sel",{"opts":{"0":"Ausente: necessidades nutricionais normais","1":"Leve: fratura de quadril, doença crônica com complicação aguda (cirrose, DPOC, hemodiálise, diabetes, câncer)","2":"Moderada: cirurgia abdominal de grande porte, AVC, pneumonia grave, neoplasia hematológica","3":"Grave: traumatismo craniano, transplante de medula óssea, UTI com APACHE II &gt; 10"}}],["idade","Idade ≥ 70 anos","chk",{"pts":1}]],"config":{"unit":"","label":"NRS-2002","fields":[["estado","sel",0],["gravidade","sel",0],["idade","chk",1]],"bands":[[0,"low","Sem risco nutricional no momento","Repetir a triagem semanalmente; se houver cirurgia de grande porte programada, considerar plano nutricional preventivo."],[3,"high","Paciente em risco nutricional","Iniciar plano de terapia nutricional."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

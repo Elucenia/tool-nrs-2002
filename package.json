@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-nrs-2002",
   "version": "0.1.0",
-  "description": "NRS-2002 · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "NRS-2002 · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
