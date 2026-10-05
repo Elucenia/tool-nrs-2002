@@ -1,22 +1,51 @@
 [
   {
-    "label": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
-    "input": {
+    "id": "nrs-2002",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+    "originalInput": {
       "estado": "1",
       "gravidade": "1"
+    },
+    "input": {
+      "estado": "1",
+      "gravidade": "1",
+      "idade": false
     },
     "expected": {
       "score": 2,
       "level": "low"
     },
-    "originalInput": {
-      "estado": "1",
-      "gravidade": "1"
+    "recordedResult": {
+      "main": [
+        "2",
+        "pontos"
+      ],
+      "label": "NRS-2002",
+      "raw": {
+        "score": 2
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+    "id": "nrs-2002",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+    "originalInput": {
+      "estado": "1",
+      "gravidade": "1",
+      "idade": true
+    },
     "input": {
       "estado": "1",
       "gravidade": "1",
@@ -26,15 +55,35 @@
       "score": 3,
       "level": "high"
     },
-    "originalInput": {
-      "estado": "1",
-      "gravidade": "1",
-      "idade": true
+    "recordedResult": {
+      "main": [
+        "3",
+        "pontos"
+      ],
+      "label": "NRS-2002",
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+    "id": "nrs-2002",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+    "originalInput": {
+      "estado": "2",
+      "gravidade": "2",
+      "idade": true
+    },
     "input": {
       "estado": "2",
       "gravidade": "2",
@@ -44,11 +93,23 @@
       "score": 5,
       "level": "high"
     },
-    "originalInput": {
-      "estado": "2",
-      "gravidade": "2",
-      "idade": true
+    "recordedResult": {
+      "main": [
+        "5",
+        "pontos"
+      ],
+      "label": "NRS-2002",
+      "raw": {
+        "score": 5
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

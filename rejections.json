@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field estado",
+    "input": {
+      "gravidade": "1",
+      "idade": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "estado"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field estado",
+    "input": {
+      "estado": "",
+      "gravidade": "1",
+      "idade": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "estado"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option estado",
+    "input": {
+      "estado": "__ELUCENIA_INVALID_OPTION__",
+      "gravidade": "1",
+      "idade": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "estado"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field gravidade",
+    "input": {
+      "estado": "1",
+      "idade": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "gravidade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field gravidade",
+    "input": {
+      "estado": "1",
+      "gravidade": "",
+      "idade": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "gravidade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option gravidade",
+    "input": {
+      "estado": "1",
+      "gravidade": "__ELUCENIA_INVALID_OPTION__",
+      "idade": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "gravidade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean idade",
+    "input": {
+      "estado": "1",
+      "gravidade": "1",
+      "idade": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

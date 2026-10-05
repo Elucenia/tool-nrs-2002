@@ -5,6 +5,7 @@
     "short": "Triagem de risco nutricional no paciente internado",
     "desc": "Calcule o NRS-2002 (Nutritional Risk Screening), a triagem de risco nutricional recomendada pela ESPEN para adultos internados, com a conduta indicada.",
     "lead": "Identifica adultos hospitalizados em risco nutricional que se beneficiam de terapia nutricional, combinando estado nutricional, gravidade da doença e idade.",
+    "kind": "Escore",
     "spec": [
       "nutrologia",
       "clinica-medica",
@@ -12,7 +13,6 @@
       "cirurgia-geral",
       "geriatria"
     ],
-    "tier": 1,
     "fields": [
       [
         "estado",
@@ -44,51 +44,10 @@
         "idade",
         "Idade ≥ 70 anos",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ]
     ],
-    "score": {
-      "label": "NRS-2002",
-      "unit": "",
-      "bands": [
-        [
-          0,
-          "low",
-          "Sem risco nutricional no momento",
-          "Repetir a triagem semanalmente; se houver cirurgia de grande porte programada, considerar plano nutricional preventivo."
-        ],
-        [
-          3,
-          "high",
-          "Paciente em risco nutricional",
-          "Iniciar plano de terapia nutricional."
-        ]
-      ]
-    },
     "formula": "<p>Escore = prejuízo do estado nutricional (0 a 3) + gravidade da doença (0 a 3) + 1 ponto se idade ≥ 70 anos. Total de 0 a 7.</p><p>Escore ≥ 3: risco nutricional.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Conduta"
-      ],
-      [
-        "0 a 2",
-        "Retriar semanalmente"
-      ],
-      [
-        "≥ 3",
-        "Risco nutricional: iniciar plano de terapia nutricional"
-      ]
-    ],
-    "table_note": "Pela ESPEN, a triagem começa com 4 perguntas iniciais (IMC &lt; 20,5; perda de peso em 3 meses; redução da ingestão na última semana; doença grave). Se todas forem \"não\", retriar semanalmente.",
-    "tips": [
-      "Aplique nas primeiras 24 a 48 horas da internação; não se aplica a crianças.",
-      "Na UTI, o paciente com APACHE II &gt; 10 já soma 3 pontos pela gravidade: praticamente todo doente crítico é \"em risco\" pelo NRS-2002.",
-      "Triagem positiva pede avaliação nutricional completa (por exemplo, pelos critérios GLIM para diagnóstico de desnutrição), não diagnóstico de desnutrição por si só.",
-      "Para a gravidade, compare o paciente com os exemplos da escala: eles servem de âncora para doenças não listadas."
-    ],
     "sources": [
       [
         "Kondrup J et al. Nutritional risk screening (NRS 2002): a new method based on an analysis of controlled clinical trials. Clin Nutr, 2003.",
@@ -136,43 +95,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "",
-      "label": "NRS-2002",
-      "fields": [
-        [
-          "estado",
-          "sel",
-          0
-        ],
-        [
-          "gravidade",
-          "sel",
-          0
-        ],
-        [
-          "idade",
-          "chk",
-          1
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Sem risco nutricional no momento",
-          "Repetir a triagem semanalmente; se houver cirurgia de grande porte programada, considerar plano nutricional preventivo."
-        ],
-        [
-          3,
-          "high",
-          "Paciente em risco nutricional",
-          "Iniciar plano de terapia nutricional."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -181,17 +103,208 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T13:01:58.037Z",
+      "total": 32,
+      "passed": 32,
+      "evidencePath": "reports/review-20261003/four-additional-score-source-oracles-final23.json",
+      "evidenceSha256": "7cc224441c13fd989be61866ed070958061dee40c47c8ba632f3edbd6330f1c1",
+      "peerEvidencePath": "reports/review-20261003/independent-four-additional-score-source-oracles-final23.json",
+      "peerEvidenceSha256": "516e1b32ed4a2fd53ba8be2d26e9485ca027e6f185f3e2cd2873dcc3e3249fe7",
+      "scope": "Entered point sum only; wording, applicability, thresholds, diagnostic decisions, translations, licensing and overall release suitability are not approved.",
+      "source": {
+        "keys": [
+          "estado",
+          "gravidade",
+          "idade"
+        ],
+        "options": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "booleans": [
+          "idade"
+        ],
+        "exhaustive": true,
+        "url": "https://www.espen.org/documents/Screening.pdf",
+        "edition": "Kondrup2003 ESPEN nutrition screening2002, DOI10.1016/S0261-5614(03)00098-0",
+        "locator": "Appendix, Table2, PDFp6: two0–3 domains; add1 for age≥70 years",
+        "access": "Official ESPEN original PDF text and page image read directly on2026-10-04. Age≥70 includes70. The application checkbox represents that entered age condition. Preliminary screening and nutritional-care decisions are outside this sum test."
+      },
+      "implementations": [
+        {
+          "app": "website",
+          "id": "nrs-2002",
+          "sha256": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757"
+        },
+        {
+          "app": "dashboard",
+          "id": "nrs-2002",
+          "sha256": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757"
+        },
+        {
+          "app": "command-center",
+          "id": "nrs-2002",
+          "sha256": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757"
+        }
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "NRS 2002/ESPENKondrup 2003:2 domínios 0–3, idade≥70+1, total 0–7",
+    "implementationVersion": "nrs-2002@native-2026-10-03+6f4ef93ebbd8",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/12765673/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Escore = prejuízo do estado nutricional (0 a 3) + gravidade da doença (0 a 3) + 1 ponto se idade ≥ 70 anos. Total de 0 a 7. Escore ≥ 3: risco nutricional.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "estado",
+            "label": "Prejuízo do estado nutricional",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Ausente: estado nutricional normal",
+              "1": "Leve: perda de peso &gt; 5% em 3 meses ou ingestão de 50 a 75% da necessidade na última semana",
+              "2": "Moderado: perda &gt; 5% em 2 meses, ou IMC 18,5 a 20,5 com estado geral comprometido, ou ingestão de 25 a 60%",
+              "3": "Grave: perda &gt; 5% em 1 mês (&gt; 15% em 3 meses), ou IMC &lt; 18,5 com estado geral comprometido, ou ingestão de 0 a 25%"
+            }
+          },
+          {
+            "key": "gravidade",
+            "label": "Gravidade da doença (aumento das necessidades)",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Ausente: necessidades nutricionais normais",
+              "1": "Leve: fratura de quadril, doença crônica com complicação aguda (cirrose, DPOC, hemodiálise, diabetes, câncer)",
+              "2": "Moderada: cirurgia abdominal de grande porte, AVC, pneumonia grave, neoplasia hematológica",
+              "3": "Grave: traumatismo craniano, transplante de medula óssea, UTI com APACHE II &gt; 10"
+            }
+          },
+          {
+            "key": "idade",
+            "label": "Idade ≥ 70 anos",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "8a4fe194d264c00fb227f0906dac0eb8e94f106d937b761f6cc949eb6f157013"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Kondrup J et al. Nutritional risk screening (NRS 2002): a new method based on an analysis of controlled clinical trials. Clin Nutr, 2003.",
+          "url": "https://doi.org/10.1016/S0261-5614(02)00214-5",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Nutritional risk screening (NRS 2002): a new method based on an analysis of controlled clinical trials.",
+            "year": "2003",
+            "firstPublicationDate": "2003-06-01",
+            "doi": "10.1016/s0261-5614(02)00214-5",
+            "pmid": "12765673",
+            "journal": "Clinical nutrition (Edinburgh, Scotland)",
+            "authors": "Kondrup J, Rasmussen HH, Hamberg O, Stanga Z, Ad Hoc ESPEN Working Group."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/12765673/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "c072c792e3cdce223b71ffbf5a3d57a467232437123228a6e7069e85c85b4982",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Kondrup J et al. ESPEN guidelines for nutrition screening 2002. Clin Nutr, 2003.",
+          "url": "https://doi.org/10.1016/S0261-5614(03)00098-0",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "ESPEN guidelines for nutrition screening 2002.",
+            "year": "2003",
+            "firstPublicationDate": "2003-08-01",
+            "doi": "10.1016/s0261-5614(03)00098-0",
+            "pmid": "12880610",
+            "journal": "Clinical nutrition (Edinburgh, Scotland)",
+            "authors": "Kondrup J, Allison SP, Elia M, Vellas B, Plauth M, Educational and Clinical Practice Committee, European Society of Parenteral and Enteral Nutrition (ESPEN)."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/12880610/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "84a0f141887e0f4c0a95a5c1a8b46ac4f46c2d5feb828496aa109a20f8b16d6d",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T13:01:58.037Z",
+        "total": 32,
+        "passed": 32,
+        "evidencePath": "reports/review-20261003/four-additional-score-source-oracles-final23.json",
+        "scope": "Entered point sum only; wording, applicability, thresholds, diagnostic decisions, translations, licensing and overall release suitability are not approved.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "44038c4f05afdb6c1c7b0580392f1fc0b1d18463265bc013c95362e499770b45"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757"
+    },
+    "limits": "O NRS-2002 é triagem de risco baseada na combinação de estado nutricional e gravidade da doença. Seu desenvolvimento discriminou grupos de estudos com maior probabilidade de benefício; um total não garante resposta individual nem prescreve via ou dose de suporte nutricional. Definições, elegibilidade e idade devem corresponder à versão.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:03.092Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não fornece faixa adulta hospitalizada, tabela de itens, +1 ≥ 70, corte ou intervenção/dose específica. Diretriz ESPEN é fonte distinta."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/nrs-2002/calculator.js",
+    "bytes": 5327,
+    "sha256": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "42ddce6b97943e0a546ae67a8496a7bf9113a57de178437f27d68b9910de9f45",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 32,
+      "sha256": "737a785fa4c199e73d2e9528ac854ea50138669e548092d9230d21559ae5e364",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
