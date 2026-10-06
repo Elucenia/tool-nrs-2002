@@ -168,7 +168,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "NRS 2002/ESPENKondrup 2003:2 domínios 0–3, idade≥70+1, total 0–7",
-    "implementationVersion": "nrs-2002@native-2026-10-03+6f4ef93ebbd8",
+    "implementationVersion": "nrs-2002@native-2026-10-05+2d1badfe3b47",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/12765673/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -274,7 +274,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757"
+      "implementationHash": "2d1badfe3b47aff5eb1e72ed89f8f4d0d003a5e5dbc0469f704bc93d84106539",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "nrs-2002@native-2026-10-03+6f4ef93ebbd8",
+          "previousImplementationHash": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757",
+          "implementationHash": "2d1badfe3b47aff5eb1e72ed89f8f4d0d003a5e5dbc0469f704bc93d84106539",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "8a4fe194d264c00fb227f0906dac0eb8e94f106d937b761f6cc949eb6f157013",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O NRS-2002 é triagem de risco baseada na combinação de estado nutricional e gravidade da doença. Seu desenvolvimento discriminou grupos de estudos com maior probabilidade de benefício; um total não garante resposta individual nem prescreve via ou dose de suporte nutricional. Definições, elegibilidade e idade devem corresponder à versão.",
     "sourceLimitEvidence": {
@@ -293,15 +321,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/nrs-2002/calculator.js",
-    "bytes": 5327,
-    "sha256": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757"
+    "bytes": 5532,
+    "sha256": "2d1badfe3b47aff5eb1e72ed89f8f4d0d003a5e5dbc0469f704bc93d84106539"
   },
-  "sourceToolSha256": "42ddce6b97943e0a546ae67a8496a7bf9113a57de178437f27d68b9910de9f45",
+  "sourceToolSha256": "f80e54d7a580f4dacd59f90f2c53a448d213e50dbde144c5e0e379e114aa5c0b",
   "omittedFullReferenceBanks": [
     {
       "rows": 32,
       "sha256": "737a785fa4c199e73d2e9528ac854ea50138669e548092d9230d21559ae5e364",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

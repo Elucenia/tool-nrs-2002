@@ -1,0 +1,169 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "nrs-2002",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "bd7e6960980f6e47c31fc2a8a0d5026c93343155",
+    "oldEngineSha256": "6f4ef93ebbd80294b5978e8a1793444a194be34b223fdf74f91a0981263a0757",
+    "currentEngineSha256": "2d1badfe3b47aff5eb1e72ed89f8f4d0d003a5e5dbc0469f704bc93d84106539"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+      "input": {
+        "estado": "1",
+        "gravidade": "1",
+        "idade": false
+      },
+      "publicOutput": {
+        "id": "nrs-2002",
+        "main": [
+          "2",
+          "pontos"
+        ],
+        "label": "NRS-2002",
+        "raw": {
+          "score": 2
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 2,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "2",
+          "pontos"
+        ],
+        "label": "NRS-2002",
+        "level": "low",
+        "verdict": "Sem risco nutricional no momento",
+        "note": "Repetir a triagem semanalmente; se houver cirurgia de grande porte programada, considerar plano nutricional preventivo.",
+        "raw": {
+          "score": 2
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+      "input": {
+        "estado": "1",
+        "gravidade": "1",
+        "idade": true
+      },
+      "publicOutput": {
+        "id": "nrs-2002",
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "NRS-2002",
+        "raw": {
+          "score": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 3,
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "NRS-2002",
+        "level": "high",
+        "verdict": "Paciente em risco nutricional",
+        "note": "Iniciar plano de terapia nutricional.",
+        "raw": {
+          "score": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+      "input": {
+        "estado": "2",
+        "gravidade": "2",
+        "idade": true
+      },
+      "publicOutput": {
+        "id": "nrs-2002",
+        "main": [
+          "5",
+          "pontos"
+        ],
+        "label": "NRS-2002",
+        "raw": {
+          "score": 5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 5,
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "5",
+          "pontos"
+        ],
+        "label": "NRS-2002",
+        "level": "high",
+        "verdict": "Paciente em risco nutricional",
+        "note": "Iniciar plano de terapia nutricional.",
+        "raw": {
+          "score": 5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "id": "nrs-2002",
+  "implementationVersion": "nrs-2002@native-2026-10-05+2d1badfe3b47",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sem risco nutricional no momento",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Repetir a triagem semanalmente; se houver cirurgia de grande porte programada, considerar plano nutricional preventivo.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Paciente em risco nutricional",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Iniciar plano de terapia nutricional.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Paciente em risco nutricional",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Iniciar plano de terapia nutricional.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "No nutritional risk at present",
+            "locale": "en",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "Repeat screening weekly; if major surgery is scheduled, consider a preventive nutritional plan.",
+            "locale": "en",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Patient at nutritional risk",
+            "locale": "en",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Initiate nutritional therapy plan.",
+            "locale": "en",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Patient at nutritional risk",
+            "locale": "en",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Initiate nutritional therapy plan.",
+            "locale": "en",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sin riesgo nutricional en este momento",
+            "locale": "es",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "Repita el cribado semanalmente; si hay una cirugía mayor programada, considere un plan nutricional preventivo.",
+            "locale": "es",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Paciente en riesgo nutricional",
+            "locale": "es",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Iniciar plan de terapia nutricional.",
+            "locale": "es",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Paciente en riesgo nutricional",
+            "locale": "es",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Iniciar plan de terapia nutricional.",
+            "locale": "es",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Aucun risque nutritionnel à ce jour",
+            "locale": "fr",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "Répéter le dépistage chaque semaine ; en cas de chirurgie majeure programmée, envisager un plan nutritionnel préventif.",
+            "locale": "fr",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Patient à risque nutritionnel",
+            "locale": "fr",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Initier un plan de thérapie nutritionnelle.",
+            "locale": "fr",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Patient à risque nutritionnel",
+            "locale": "fr",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Initier un plan de thérapie nutritionnelle.",
+            "locale": "fr",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Derzeit kein Ernährungsrisiko",
+            "locale": "de",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "Das Screening wöchentlich wiederholen; wenn eine größere Operation geplant ist, einen präventiven Ernährungsplan erwägen.",
+            "locale": "de",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Patient mit Ernährungsrisiko",
+            "locale": "de",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Plan zur Ernährungstherapie einleiten.",
+            "locale": "de",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Patient mit Ernährungsrisiko",
+            "locale": "de",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Plan zur Ernährungstherapie einleiten.",
+            "locale": "de",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Nessun rischio nutrizionale al momento",
+            "locale": "it",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "Ripetere lo screening settimanalmente; se è programmato un intervento chirurgico maggiore, considerare un piano nutrizionale preventivo.",
+            "locale": "it",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Paziente a rischio nutrizionale",
+            "locale": "it",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Avviare il piano di terapia nutrizionale.",
+            "locale": "it",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Paziente a rischio nutrizionale",
+            "locale": "it",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "Avviare il piano di terapia nutrizionale.",
+            "locale": "it",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "لا يوجد خطر غذائي في الوقت الحالي",
+            "locale": "ar",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "أعد التحري أسبوعيًا؛ وإذا كانت هناك جراحة كبرى مجدولة، ففكّر في خطة تغذوية وقائية.",
+            "locale": "ar",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "مريض معرض لخطر سوء التغذية",
+            "locale": "ar",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "بدء خطة العلاج الغذائي.",
+            "locale": "ar",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "مريض معرض لخطر سوء التغذية",
+            "locale": "ar",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "بدء خطة العلاج الغذائي.",
+            "locale": "ar",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "目前无营养风险",
+            "locale": "zh",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "每周重复筛查；如果计划进行大型手术，请考虑预防性营养方案。",
+            "locale": "zh",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "患者存在营养风险",
+            "locale": "zh",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "启动营养治疗计划。",
+            "locale": "zh",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "患者存在营养风险",
+            "locale": "zh",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "启动营养治疗计划。",
+            "locale": "zh",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "現時点で栄養リスクなし",
+            "locale": "ja",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "スクリーニングは毎週繰り返すこと；大手術が予定されている場合は、予防的な栄養計画を検討する。",
+            "locale": "ja",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "栄養リスクありの患者",
+            "locale": "ja",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "栄養療法計画を開始する。",
+            "locale": "ja",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "栄養リスクありの患者",
+            "locale": "ja",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "栄養療法計画を開始する。",
+            "locale": "ja",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "DPOC exacerbada, ingestão de 60% da necessidade, 65 anos: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "वर्तमान में पोषण जोखिम नहीं",
+            "locale": "hi",
+            "template": "documented-authored-f30af2238ef030f23668"
+          },
+          "note": {
+            "text": "स्क्रीनिंग साप्ताहिक रूप से दोहराएँ; यदि बड़ी सर्जरी निर्धारित है, तो निवारक पोषण योजना पर विचार करें।",
+            "locale": "hi",
+            "template": "documented-authored-be7db3ede3e493a0109a"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Mesmo paciente com 72 anos: 3 pontos (em risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "पोषण जोखिम वाला रोगी",
+            "locale": "hi",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "पोषण चिकित्सा योजना प्रारंभ करें।",
+            "locale": "hi",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Pós-operatório de colectomia, IMC 19 com estado geral ruim, 75 anos: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "पोषण जोखिम वाला रोगी",
+            "locale": "hi",
+            "template": "documented-authored-c3a523f667454f0861cd"
+          },
+          "note": {
+            "text": "पोषण चिकित्सा योजना प्रारंभ करें।",
+            "locale": "hi",
+            "template": "documented-authored-3b01cc235c955c40d978"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}
